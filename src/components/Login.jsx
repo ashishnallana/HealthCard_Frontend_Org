@@ -44,11 +44,12 @@ function Login() {
 
   return (
     <div className="flex flex-col justify-center items-center h-screen w-screen text-[white] font-semibold">
+    <div className="bg-blue-500 rounded-md h-90% w-90% mx-10 my-10 px-11 py-11 shadow-2xl">
       <form
         onSubmit={handleSubmit}
         className="gradient_bg py-3 rounded-lg flex flex-col px-5"
       >
-        <h1 className="-translate-y-10 text-5xl font-extrabold flex justify-center text_shadow">
+        <h1 className="-translate-y-9 text-5xl font-extrabold flex justify-center text_shadow text-white ">
           LOGIN
         </h1>
         <div>
@@ -75,16 +76,17 @@ function Login() {
         </div>
         <button
           type="submit"
-          className="bg-[#1a1635] px-3 py-2 rounded-md mt-5 mb-3"
+          className="bg-[#1a1635] px-3 py-2 rounded-md mt-5 mb-2  hover:text-slate-900 hover:bg-blue-400"
         >
           Login
         </button>
       </form>
 
       <br />
-      <p>
-        Don't have an account? <Link to={"/signup"}>Signup</Link>
+      <p className="flex  justify-center items-center">
+        Don't have an account? <Link to = {" /signup "} className="px-2  hover:text-slate-900"> Signup </Link>
       </p>
+      </div>
     </div>
   );
 }

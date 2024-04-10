@@ -43,7 +43,7 @@ function PatientReports() {
   }, [searchParams]);
 
   return (
-    <div>
+    <div className="m-2 bg-black text-white  px-2 py-1 rounded-md ">
       <div>
         {reports.map((e, i) => (
           <div className="flex flex-col space-y-2">
@@ -52,7 +52,7 @@ function PatientReports() {
               <a
                 href={f}
                 target="_blank"
-                className="m-2 bg-black text-white px-2 py-1 rounded-md"
+                className=""
               >
                 file {j + 1}
               </a>

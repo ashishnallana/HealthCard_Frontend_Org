@@ -38,9 +38,9 @@ function Dashboard() {
 
   return (
     <div className="min-h-screen flex flex-col justify-center items-center">
-      <h1>Organisation PORTAL</h1>
+      <h1 className="-translate-y-8 text-5xl font-extrabold flex justify-center text_shadow text-white">ORGANISATION PORTAL</h1>
       {userData && (
-        <div>
+        <div className="shadow-2xl mx-10 my-13 px-10 py-11 bg-blue-400 rounded-sm">
           <AddReport data={userData} />
           <ReportsList id={userData._id} />
         </div>
