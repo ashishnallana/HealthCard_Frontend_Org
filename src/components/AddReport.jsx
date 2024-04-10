@@ -67,9 +67,9 @@ function AddReport({ data }) {
   }
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center  ">
       <button
-        className="bg-[#1a1635] text-white px-3 py-2 rounded-md mt-5 mb-3"
+        className="bg-[#1a1635] text-white px-3 py-2 rounded-md mt-5 mb-3  hover:text-slate-900 hover:bg-blue-700"
         onClick={() => setReportAdder(true)}
       >
         Add a new report
@@ -77,7 +77,7 @@ function AddReport({ data }) {
       {reportAdder && (
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col space-y-3 bg-blue-400 p-5 rounded-md"
+          className="flex flex-col space-y-3 bg-blue-600 px-12 py-8 rounded-2xl"
         >
           <input
             value={patientId}
@@ -86,11 +86,11 @@ function AddReport({ data }) {
             className="bg-transparent outline-none placeholder:text-white text-xl py-2 border-b-2 my-2"
             onChange={(e) => setPatientId(e.target.value)}
           />
-          <input type="file" onChange={uploadImages} className="" multiple />
+          <input type="file" onChange={uploadImages} className="font-sans" multiple />
           {isUploading ? "Uploading..." : "Upload complete"}
           <button
             type="submit"
-            className="bg-[#1a1635] px-3 py-2 rounded-md mt-5 mb-3"
+            className="bg-[#0e0b1b] px-3 py-2 rounded-md mt-5 mb-3  hover:text-slate-900 hover:bg-blue-400"
           >
             Submit Report
           </button>
