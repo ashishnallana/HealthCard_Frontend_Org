@@ -31,6 +31,7 @@ function AddReport({ data }) {
           _id: data._id,
           pid: patientId,
           files: reportFiles,
+          org_name: data.name,
         }
       );
       console.log(res);
@@ -86,8 +87,13 @@ function AddReport({ data }) {
             className="bg-transparent outline-none placeholder:text-white text-xl py-2 border-b-2 my-2"
             onChange={(e) => setPatientId(e.target.value)}
           />
-          <input type="file" onChange={uploadImages} className="font-sans" multiple />
-          {isUploading ? "Uploading..." : "Upload complete"}
+          <input
+            type="file"
+            onChange={uploadImages}
+            className="font-sans"
+            multiple
+          />
+          {/* {isUploading ? "Uploading..." : "Upload complete"} */}
           <button
             type="submit"
             className="bg-[#0e0b1b] px-3 py-2 rounded-md mt-5 mb-3  hover:text-slate-900 hover:bg-blue-400"

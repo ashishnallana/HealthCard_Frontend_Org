@@ -43,20 +43,22 @@ function PatientReports() {
   }, [searchParams]);
 
   return (
-    <div className="m-2 bg-black text-white  px-2 py-1 rounded-md ">
+    <div className="m-2  px-2 py-1 rounded-md ">
       <div>
         {reports.map((e, i) => (
-          <div className="flex flex-col space-y-2">
+          <div className="flex flex-col space-y-2 my-3 p-3 rounded-md bg-white text-black">
             <p>patient id : {e.patient_id}</p>
-            {e.files.map((f, j) => (
-              <a
-                href={f}
-                target="_blank"
-                className=""
-              >
-                file {j + 1}
-              </a>
-            ))}
+            <div className="flex space-x-3">
+              {e.files.map((f, j) => (
+                <a
+                  href={f}
+                  target="_blank"
+                  className="text-sm bg-black text-white px-2 py-1 rounded-md"
+                >
+                  file {j + 1}
+                </a>
+              ))}
+            </div>
             <p>{dateFormatter(e.updatedAt)}</p>
           </div>
         ))}
